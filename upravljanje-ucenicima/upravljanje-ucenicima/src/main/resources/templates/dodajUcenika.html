@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodaj Ucenika</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+<div align="center">
+    <h1>Ucenici</h1>
+    <hr>
+    <h2>Novi Ucenik</h2>
+
+  <form action="#" th:action="@{/sacuvajUcenika}" th:object="${noviUcenik}" method="post">
+
+    <input type="text" th:field="*{ime}" placeholder="ime" class="form-control mb-4 col-4">
+
+    <input type="text" th:field="*{prezime}" placeholder="prezime" class="form-control mb-4 col-4">
+
+    <input type="number" step="0.01" min="1" max="5" th:field="*{prosek}" placeholder="prosek" class="form-control mb-4 col-4">
+
+    <button type="submit" class="btn btn-primary">Sacuvaj</button>
+
+  </form>
+</div>
+
+</body>
+</html>
